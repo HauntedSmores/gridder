@@ -70,156 +70,152 @@ export default {
 
         &.flush {
             padding: 0;
-            margin-left: -#{$gutter};
-            margin-right: -#{$gutter};
 
             & > [class^="span_"]:not([class^="offset_"]) {
-                margin-top: 0;
-                margin-bottom: 0;
+                padding: 0;
             }
         }
     }
 
     [class^="span_"] {
-        border: 1px solid blue;
-        box-sizing: border-box;
-        margin: $gutter;
+        padding: $gutter;
         width: 100%;
+        box-sizing: border-box;
     }
 
     // Base column sizes
     .span_1_xs {
-        width: calc((1/12 * 100%) - (#{$gutter} * 2));
+        width: calc(1/12 * 100%);
     }
 
     .span_2_xs {
-        width: calc((2/12 * 100%) - (#{$gutter} * 2));
+        width: calc(2/12 * 100%);
     }
 
     .span_3_xs {
-        width: calc((3/12 * 100%) - (#{$gutter} * 2));
+        width: calc(3/12 * 100%);
     }
 
     .span_4_xs {
-        width: calc((4/12 * 100%) - (#{$gutter} * 2));
+        width: calc(4/12 * 100%);
     }
 
     .span_5_xs {
-        width: calc((5/12 * 100%) - (#{$gutter} * 2));
+        width: calc(5/12 * 100%);
     }
 
     .span_6_xs {
-        width: calc((6/12 * 100%) - (#{$gutter} * 2));
+        width: calc(6/12 * 100%);
     }
 
     .span_7_xs {
-        width: calc((7/12 * 100%) - (#{$gutter} * 2));
+        width: calc(7/12 * 100%);
     }
 
     .span_8_xs {
-        width: calc((8/12 * 100%) - (#{$gutter} * 2));
+        width: calc(8/12 * 100%);
     }
 
     .span_9_xs {
-        width: calc((9/12 * 100%) - (#{$gutter} * 2));
+        width: calc(9/12 * 100%);
     }
 
     .span_10_xs {
-        width: calc((10/12 * 100%) - (#{$gutter} * 2));
+        width: calc(10/12 * 100%);
     }
 
     .span_11_xs {
-        width: calc((11/12 * 100%) - (#{$gutter} * 2));
+        width: calc(11/12 * 100%);
     }
 
     // Base Offsets
     .offset_1_xs {
-        margin-left: calc((1/12 * 100%) + #{$gutter});
+        margin-left: calc(1/12 * 100%);
     }
 
     .offset_2_xs {
-        margin-left: calc((2/12 * 100%) + #{$gutter});
+        margin-left: calc(2/12 * 100%);
     }
 
     .offset_3_xs {
-        margin-left: calc((3/12 * 100%) + #{$gutter});
+        margin-left: calc(3/12 * 100%);
     }
 
     .offset_4_xs {
-        margin-left: calc((4/12 * 100%) + #{$gutter});
+        margin-left: calc(4/12 * 100%);
     }
 
     .offset_5_xs {
-        margin-left: calc((5/12 * 100%) + #{$gutter});
+        margin-left: calc(5/12 * 100%);
     }
 
     .offset_6_xs {
-        margin-left: calc((6/12 * 100%) + #{$gutter});
+        margin-left: calc(6/12 * 100%);
     }
 
     .offset_7_xs {
-        margin-left: calc((7/12 * 100%) + #{$gutter});
+        margin-left: calc(7/12 * 100%);
     }
 
     .offset_8_xs {
-        margin-left: calc((8/12 * 100%) + #{$gutter});
+        margin-left: calc(8/12 * 100%);
     }
 
     .offset_9_xs {
-        margin-left: calc((9/12 * 100%) + #{$gutter});
+        margin-left: calc(9/12 * 100%);
     }
 
     .offset_10_xs {
-        margin-left: calc((10/12 * 100%) + #{$gutter});
+        margin-left: calc(10/12 * 100%);
     }
 
     .offset_11_xs {
-        margin-left: calc((11/12 * 100%) + #{$gutter});
+        margin-left: calc(11/12 * 100%);
     }
 
     @media (min-width: $small_break) {
         .span_1_sm {
-            width: calc((1/12 * 100%) - (#{$gutter} * 2));
+            width: calc(1/12 * 100%);
         }
 
         .span_2_sm {
-            width: calc((2/12 * 100%) - (#{$gutter} * 2));
+            width: calc(2/12 * 100%);
         }
 
         .span_3_sm {
-            width: calc((3/12 * 100%) - (#{$gutter} * 2));
+            width: calc(3/12 * 100%);
         }
 
         .span_4_sm {
-            width: calc((4/12 * 100%) - (#{$gutter} * 2));
+            width: calc(4/12 * 100%);
         }
 
         .span_5_sm {
-            width: calc((5/12 * 100%) - (#{$gutter} * 2));
+            width: calc(5/12 * 100%);
         }
 
         .span_6_sm {
-            width: calc((6/12 * 100%) - (#{$gutter} * 2));
+            width: calc(6/12 * 100%);
         }
 
         .span_7_sm {
-            width: calc((7/12 * 100%) - (#{$gutter} * 2));
+            width: calc(7/12 * 100%);
         }
 
         .span_8_sm {
-            width: calc((8/12 * 100%) - (#{$gutter} * 2));
+            width: calc(8/12 * 100%);
         }
 
         .span_9_sm {
-            width: calc((9/12 * 100%) - (#{$gutter} * 2));
+            width: calc(9/12 * 100%);
         }
 
         .span_10_sm {
-            width: calc((10/12 * 100%) - (#{$gutter} * 2));
+            width: calc(10/12 * 100%);
         }
 
         .span_11_sm {
-            width: calc((11/12 * 100%) - (#{$gutter} * 2));
+            width: calc(11/12 * 100%);
         }
 
         .span_12_sm {
@@ -227,185 +223,185 @@ export default {
         }
 
         .offset_1_sm {
-            margin-left: calc((1/12 * 100%) + #{$gutter});
+            margin-left: calc(1/12 * 100%);
         }
 
         .offset_2_sm {
-            margin-left: calc((2/12 * 100%) + #{$gutter});
+            margin-left: calc(2/12 * 100%);
         }
 
         .offset_3_sm {
-            margin-left: calc((3/12 * 100%) + #{$gutter});
+            margin-left: calc(3/12 * 100%);
         }
 
         .offset_4_sm {
-            margin-left: calc((4/12 * 100%) + #{$gutter});
+            margin-left: calc(4/12 * 100%);
         }
 
         .offset_5_sm {
-            margin-left: calc((5/12 * 100%) + #{$gutter});
+            margin-left: calc(5/12 * 100%);
         }
 
         .offset_6_sm {
-            margin-left: calc((6/12 * 100%) + #{$gutter});
+            margin-left: calc(6/12 * 100%);
         }
 
         .offset_7_sm {
-            margin-left: calc((7/12 * 100%) + #{$gutter});
+            margin-left: calc(7/12 * 100%);
         }
 
         .offset_8_sm {
-            margin-left: calc((8/12 * 100%) + #{$gutter});
+            margin-left: calc(8/12 * 100%);
         }
 
         .offset_9_sm {
-            margin-left: calc((9/12 * 100%) + #{$gutter});
+            margin-left: calc(9/12 * 100%);
         }
 
         .offset_10_sm {
-            margin-left: calc((10/12 * 100%) + #{$gutter});
+            margin-left: calc(10/12 * 100%);
         }
 
         .offset_11_sm {
-            margin-left: calc((11/12 * 100%) + #{$gutter});
+            margin-left: calc(11/12 * 100%);
         }
     }
 
     @media (min-width: $medium_break) {
 
         .span_1_md {
-            width: calc((1/12 * 100%) - (#{$gutter} * 2));
+            width: calc(1/12 * 100%);
         }
 
         .span_2_md {
-            width: calc((2/12 * 100%) - (#{$gutter} * 2));
+            width: calc(2/12 * 100%);
         }
 
         .span_3_md {
-            width: calc((3/12 * 100%) - (#{$gutter} * 2));
+            width: calc(3/12 * 100%);
         }
 
         .span_4_md {
-            width: calc((4/12 * 100%) - (#{$gutter} * 2));
+            width: calc(4/12 * 100%);
         }
 
         .span_5_md {
-            width: calc((5/12 * 100%) - (#{$gutter} * 2));
+            width: calc(5/12 * 100%);
         }
 
         .span_6_md {
-            width: calc((6/12 * 100%) - (#{$gutter} * 2));
+            width: calc(6/12 * 100%);
         }
 
         .span_7_md {
-            width: calc((7/12 * 100%) - (#{$gutter} * 2));
+            width: calc(7/12 * 100%);
         }
 
         .span_8_md {
-            width: calc((8/12 * 100%) - (#{$gutter} * 2));
+            width: calc(8/12 * 100%);
         }
 
         .span_9_md {
-            width: calc((9/12 * 100%) - (#{$gutter} * 2));
+            width: calc(9/12 * 100%);
         }
 
         .span_10_md {
-            width: calc((10/12 * 100%) - (#{$gutter} * 2));
+            width: calc(10/12 * 100%);
         }
 
         .span_11_md {
-            width: calc((11/12 * 100%) - (#{$gutter} * 2));
+            width: calc(11/12 * 100%);
         }
 
         .offset_1_md {
-            margin-left: calc((1/12 * 100%) + #{$gutter});
+            margin-left: calc(1/12 * 100%);
         }
 
         .offset_2_md {
-            margin-left: calc((2/12 * 100%) + #{$gutter});
+            margin-left: calc(2/12 * 100%);
         }
 
         .offset_3_md {
-            margin-left: calc((3/12 * 100%) + #{$gutter});
+            margin-left: calc(3/12 * 100%);
         }
 
         .offset_4_md {
-            margin-left: calc((4/12 * 100%) + #{$gutter});
+            margin-left: calc(4/12 * 100%);
         }
 
         .offset_5_md {
-            margin-left: calc((5/12 * 100%) + #{$gutter});
+            margin-left: calc(5/12 * 100%);
         }
 
         .offset_6_md {
-            margin-left: calc((6/12 * 100%) + #{$gutter});
+            margin-left: calc(6/12 * 100%);
         }
 
         .offset_7_md {
-            margin-left: calc((7/12 * 100%) + #{$gutter});
+            margin-left: calc(7/12 * 100%);
         }
 
         .offset_8_md {
-            margin-left: calc((8/12 * 100%) + #{$gutter});
+            margin-left: calc(8/12 * 100%);
         }
 
         .offset_9_md {
-            margin-left: calc((9/12 * 100%) + #{$gutter});
+            margin-left: calc(9/12 * 100%);
         }
 
         .offset_10_md {
-            margin-left: calc((10/12 * 100%) + #{$gutter});
+            margin-left: calc(10/12 * 100%);
         }
 
         .offset_11_md {
-            margin-left: calc((11/12 * 100%) + #{$gutter});
+            margin-left: calc(11/12 * 100%);
         }
     }
 
     @media (min-width: $large_break) {
 
         .span_1_lg {
-            width: calc((1/12 * 100%) - (#{$gutter} * 2));
+            width: calc(1/12 * 100%);
         }
 
         .span_2_lg {
-            width: calc((2/12 * 100%) - (#{$gutter} * 2));
+            width: calc(2/12 * 100%);
         }
 
         .span_3_lg {
-            width: calc((3/12 * 100%) - (#{$gutter} * 2));
+            width: calc(3/12 * 100%);
         }
 
         .span_4_lg {
-            width: calc((4/12 * 100%) - (#{$gutter} * 2));
+            width: calc(4/12 * 100%);
         }
 
         .span_5_lg {
-            width: calc((5/12 * 100%) - (#{$gutter} * 2));
+            width: calc(5/12 * 100%);
         }
 
         .span_6_lg {
-            width: calc((6/12 * 100%) - (#{$gutter} * 2));
+            width: calc(6/12 * 100%);
         }
 
         .span_7_lg {
-            width: calc((7/12 * 100%) - (#{$gutter} * 2));
+            width: calc(7/12 * 100%);
         }
 
         .span_8_lg {
-            width: calc((8/12 * 100%) - (#{$gutter} * 2));
+            width: calc(8/12 * 100%);
         }
 
         .span_9_lg {
-            width: calc((9/12 * 100%) - (#{$gutter} * 2));
+            width: calc(9/12 * 100%);
         }
 
         .span_10_lg {
-            width: calc((10/12 * 100%) - (#{$gutter} * 2));
+            width: calc(10/12 * 100%);
         }
 
         .span_11_lg {
-            width: calc((11/12 * 100%) - (#{$gutter} * 2));
+            width: calc(11/12 * 100%);
         }
 
         .span_12_lg {
@@ -413,55 +409,50 @@ export default {
         }
 
         .offset_1_lg {
-            margin-left: calc((1/12 * 100%) + #{$gutter});
+            margin-left: calc(1/12 * 100%);
         }
 
         .offset_2_lg {
-            margin-left: calc((2/12 * 100%) + #{$gutter});
+            margin-left: calc(2/12 * 100%);
         }
 
         .offset_3_lg {
-            margin-left: calc((3/12 * 100%) + #{$gutter});
+            margin-left: calc(3/12 * 100%);
         }
 
         .offset_4_lg {
-            margin-left: calc((4/12 * 100%) + #{$gutter});
+            margin-left: calc(4/12 * 100%);
         }
 
         .offset_5_lg {
-            margin-left: calc((5/12 * 100%) + #{$gutter});
+            margin-left: calc(5/12 * 100%);
         }
 
         .offset_6_lg {
-            margin-left: calc((6/12 * 100%) + #{$gutter});
+            margin-left: calc(6/12 * 100%);
         }
 
         .offset_7_lg {
-            margin-left: calc((7/12 * 100%) + #{$gutter});
+            margin-left: calc(7/12 * 100%);
         }
 
         .offset_8_lg {
-            margin-left: calc((8/12 * 100%) + #{$gutter});
+            margin-left: calc(8/12 * 100%);
         }
 
         .offset_9_lg {
-            margin-left: calc((9/12 * 100%) + #{$gutter});
+            margin-left: calc(9/12 * 100%);
         }
 
         .offset_10_lg {
-            margin-left: calc((10/12 * 100%) + #{$gutter});
+            margin-left: calc(10/12 * 100%);
         }
 
         .offset_11_lg {
-            margin-left: calc((11/12 * 100%) + #{$gutter});
+            margin-left: calc(11/12 * 100%);
         }
 
     }
-
-
-
-
-
 
 
 </style>
