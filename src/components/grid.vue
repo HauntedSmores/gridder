@@ -1,25 +1,467 @@
 <template>
   <div id="grid">
-	  <div class="row">
-		<div class="span_6_xs"  >
+	  <div class="row flush">
+		<div class="span_4_md span_2_sm">
 			<h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod a ipsum finibus lobortis. Nulla volutpat arcu eu sapien elementum pretium. Integer sed scelerisque quam, tristique dignissim enim. Integer eget quam vitae sem euismod imperdiet. Morbi sagittis libero elit, quis vestibulum nibh iaculis consectetur. Nulla vitae turpis aliquam, malesuada massa id, pretium sapien. Pellentesque malesuada viverra justo, in mollis lectus sollicitudin eu. Suspendisse ut venenatis nisi.</p>
+		</div>
+		<div class="span_4_md span_2_sm">
+			<h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod a ipsum finibus lobortis. Nulla volutpat arcu eu sapien elementum pretium. Integer sed scelerisque quam, tristique dignissim enim. Integer eget quam vitae sem euismod imperdiet. Morbi sagittis libero elit, quis vestibulum nibh iaculis consectetur. Nulla vitae turpis aliquam, malesuada massa id, pretium sapien. Pellentesque malesuada viverra justo, in mollis lectus sollicitudin eu. Suspendisse ut venenatis nisi.</p>
+		</div>
+		<div class="span_4_md span_8_sm">
+			<h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod a ipsum finibus lobortis. Nulla volutpat arcu eu sapien elementum pretium. Integer sed scelerisque quam, tristique dignissim enim. Integer eget quam vitae sem euismod imperdiet. Morbi sagittis libero elit, quis vestibulum nibh iaculis consectetur. Nulla vitae turpis aliquam, malesuada massa id, pretium sapien. Pellentesque malesuada viverra justo, in mollis lectus sollicitudin eu. Suspendisse ut venenatis nisi.</p>
+            <div class="row">
+      		<div class="span_4_md span_2_sm">
+      			<h2>Heading</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod a ipsum finibus lobortis. Nulla volutpat arcu eu sapien elementum pretium. Integer sed scelerisque quam, tristique dignissim enim. Integer eget quam vitae sem euismod imperdiet. Morbi sagittis libero elit, quis vestibulum nibh iaculis consectetur. Nulla vitae turpis aliquam, malesuada massa id, pretium sapien. Pellentesque malesuada viverra justo, in mollis lectus sollicitudin eu. Suspendisse ut venenatis nisi.</p>
+      		</div>
+      		<div class="span_4_md span_2_sm">
+      			<h2>Heading</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod a ipsum finibus lobortis. Nulla volutpat arcu eu sapien elementum pretium. Integer sed scelerisque quam, tristique dignissim enim. Integer eget quam vitae sem euismod imperdiet. Morbi sagittis libero elit, quis vestibulum nibh iaculis consectetur. Nulla vitae turpis aliquam, malesuada massa id, pretium sapien. Pellentesque malesuada viverra justo, in mollis lectus sollicitudin eu. Suspendisse ut venenatis nisi.</p>
+      		</div>
+      		<div class="span_4_md span_8_sm">
+      			<h2>Heading</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod a ipsum finibus lobortis. Nulla volutpat arcu eu sapien elementum pretium. Integer sed scelerisque quam, tristique dignissim enim. Integer eget quam vitae sem euismod imperdiet. Morbi sagittis libero elit, quis vestibulum nibh iaculis consectetur. Nulla vitae turpis aliquam, malesuada massa id, pretium sapien. Pellentesque malesuada viverra justo, in mollis lectus sollicitudin eu. Suspendisse ut venenatis nisi.</p>
+      		</div>
+      	  </div>
 		</div>
 	  </div>
+      <div class="row">
+          <div class="span_6_lg offset_6_lg span_8_md offset_4_md">
+              <h2>Heading</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod a ipsum finibus lobortis. Nulla volutpat arcu eu sapien elementum pretium. Integer sed scelerisque quam, tristique dignissim enim. Integer eget quam vitae sem euismod imperdiet. Morbi sagittis libero elit, quis vestibulum nibh iaculis consectetur. Nulla vitae turpis aliquam, malesuada massa id, pretium sapien. Pellentesque malesuada viverra justo, in mollis lectus sollicitudin eu. Suspendisse ut venenatis nisi.</p>
+          </div>
+      </div>
   </div>
 </template>
 
 <script>
 export default {
-	name: 'aepf;aep;oifkj',
-  data () {
-    return {
+    name: 'grid',
+    data () {
+        return {
 
+        }
     }
-  }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style style="scss">
+<style lang="scss">
+    @import '../assets/scss/variables';
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 $gutter;
+
+        &.align_top {
+            align-items: flex-start;
+        }
+
+        &.align_bottom {
+            align-items: flex-end;
+        }
+
+        &.align_center {
+            align-items: center;
+        }
+
+        &.flush {
+            padding: 0;
+            margin-left: -#{$gutter};
+            margin-right: -#{$gutter};
+
+            & > [class^="span_"]:not([class^="offset_"]) {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    [class^="span_"] {
+        border: 1px solid blue;
+        box-sizing: border-box;
+        margin: $gutter;
+        width: 100%;
+    }
+
+    // Base column sizes
+    .span_1_xs {
+        width: calc((1/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_2_xs {
+        width: calc((2/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_3_xs {
+        width: calc((3/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_4_xs {
+        width: calc((4/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_5_xs {
+        width: calc((5/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_6_xs {
+        width: calc((6/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_7_xs {
+        width: calc((7/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_8_xs {
+        width: calc((8/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_9_xs {
+        width: calc((9/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_10_xs {
+        width: calc((10/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    .span_11_xs {
+        width: calc((11/12 * 100%) - (#{$gutter} * 2));
+    }
+
+    // Base Offsets
+    .offset_1_xs {
+        margin-left: calc((1/12 * 100%) + #{$gutter});
+    }
+
+    .offset_2_xs {
+        margin-left: calc((2/12 * 100%) + #{$gutter});
+    }
+
+    .offset_3_xs {
+        margin-left: calc((3/12 * 100%) + #{$gutter});
+    }
+
+    .offset_4_xs {
+        margin-left: calc((4/12 * 100%) + #{$gutter});
+    }
+
+    .offset_5_xs {
+        margin-left: calc((5/12 * 100%) + #{$gutter});
+    }
+
+    .offset_6_xs {
+        margin-left: calc((6/12 * 100%) + #{$gutter});
+    }
+
+    .offset_7_xs {
+        margin-left: calc((7/12 * 100%) + #{$gutter});
+    }
+
+    .offset_8_xs {
+        margin-left: calc((8/12 * 100%) + #{$gutter});
+    }
+
+    .offset_9_xs {
+        margin-left: calc((9/12 * 100%) + #{$gutter});
+    }
+
+    .offset_10_xs {
+        margin-left: calc((10/12 * 100%) + #{$gutter});
+    }
+
+    .offset_11_xs {
+        margin-left: calc((11/12 * 100%) + #{$gutter});
+    }
+
+    @media (min-width: $small_break) {
+        .span_1_sm {
+            width: calc((1/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_2_sm {
+            width: calc((2/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_3_sm {
+            width: calc((3/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_4_sm {
+            width: calc((4/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_5_sm {
+            width: calc((5/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_6_sm {
+            width: calc((6/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_7_sm {
+            width: calc((7/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_8_sm {
+            width: calc((8/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_9_sm {
+            width: calc((9/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_10_sm {
+            width: calc((10/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_11_sm {
+            width: calc((11/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_12_sm {
+            width: 100%;
+        }
+
+        .offset_1_sm {
+            margin-left: calc((1/12 * 100%) + #{$gutter});
+        }
+
+        .offset_2_sm {
+            margin-left: calc((2/12 * 100%) + #{$gutter});
+        }
+
+        .offset_3_sm {
+            margin-left: calc((3/12 * 100%) + #{$gutter});
+        }
+
+        .offset_4_sm {
+            margin-left: calc((4/12 * 100%) + #{$gutter});
+        }
+
+        .offset_5_sm {
+            margin-left: calc((5/12 * 100%) + #{$gutter});
+        }
+
+        .offset_6_sm {
+            margin-left: calc((6/12 * 100%) + #{$gutter});
+        }
+
+        .offset_7_sm {
+            margin-left: calc((7/12 * 100%) + #{$gutter});
+        }
+
+        .offset_8_sm {
+            margin-left: calc((8/12 * 100%) + #{$gutter});
+        }
+
+        .offset_9_sm {
+            margin-left: calc((9/12 * 100%) + #{$gutter});
+        }
+
+        .offset_10_sm {
+            margin-left: calc((10/12 * 100%) + #{$gutter});
+        }
+
+        .offset_11_sm {
+            margin-left: calc((11/12 * 100%) + #{$gutter});
+        }
+    }
+
+    @media (min-width: $medium_break) {
+
+        .span_1_md {
+            width: calc((1/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_2_md {
+            width: calc((2/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_3_md {
+            width: calc((3/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_4_md {
+            width: calc((4/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_5_md {
+            width: calc((5/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_6_md {
+            width: calc((6/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_7_md {
+            width: calc((7/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_8_md {
+            width: calc((8/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_9_md {
+            width: calc((9/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_10_md {
+            width: calc((10/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_11_md {
+            width: calc((11/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .offset_1_md {
+            margin-left: calc((1/12 * 100%) + #{$gutter});
+        }
+
+        .offset_2_md {
+            margin-left: calc((2/12 * 100%) + #{$gutter});
+        }
+
+        .offset_3_md {
+            margin-left: calc((3/12 * 100%) + #{$gutter});
+        }
+
+        .offset_4_md {
+            margin-left: calc((4/12 * 100%) + #{$gutter});
+        }
+
+        .offset_5_md {
+            margin-left: calc((5/12 * 100%) + #{$gutter});
+        }
+
+        .offset_6_md {
+            margin-left: calc((6/12 * 100%) + #{$gutter});
+        }
+
+        .offset_7_md {
+            margin-left: calc((7/12 * 100%) + #{$gutter});
+        }
+
+        .offset_8_md {
+            margin-left: calc((8/12 * 100%) + #{$gutter});
+        }
+
+        .offset_9_md {
+            margin-left: calc((9/12 * 100%) + #{$gutter});
+        }
+
+        .offset_10_md {
+            margin-left: calc((10/12 * 100%) + #{$gutter});
+        }
+
+        .offset_11_md {
+            margin-left: calc((11/12 * 100%) + #{$gutter});
+        }
+    }
+
+    @media (min-width: $large_break) {
+
+        .span_1_lg {
+            width: calc((1/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_2_lg {
+            width: calc((2/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_3_lg {
+            width: calc((3/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_4_lg {
+            width: calc((4/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_5_lg {
+            width: calc((5/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_6_lg {
+            width: calc((6/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_7_lg {
+            width: calc((7/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_8_lg {
+            width: calc((8/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_9_lg {
+            width: calc((9/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_10_lg {
+            width: calc((10/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_11_lg {
+            width: calc((11/12 * 100%) - (#{$gutter} * 2));
+        }
+
+        .span_12_lg {
+            width: 100%;
+        }
+
+        .offset_1_lg {
+            margin-left: calc((1/12 * 100%) + #{$gutter});
+        }
+
+        .offset_2_lg {
+            margin-left: calc((2/12 * 100%) + #{$gutter});
+        }
+
+        .offset_3_lg {
+            margin-left: calc((3/12 * 100%) + #{$gutter});
+        }
+
+        .offset_4_lg {
+            margin-left: calc((4/12 * 100%) + #{$gutter});
+        }
+
+        .offset_5_lg {
+            margin-left: calc((5/12 * 100%) + #{$gutter});
+        }
+
+        .offset_6_lg {
+            margin-left: calc((6/12 * 100%) + #{$gutter});
+        }
+
+        .offset_7_lg {
+            margin-left: calc((7/12 * 100%) + #{$gutter});
+        }
+
+        .offset_8_lg {
+            margin-left: calc((8/12 * 100%) + #{$gutter});
+        }
+
+        .offset_9_lg {
+            margin-left: calc((9/12 * 100%) + #{$gutter});
+        }
+
+        .offset_10_lg {
+            margin-left: calc((10/12 * 100%) + #{$gutter});
+        }
+
+        .offset_11_lg {
+            margin-left: calc((11/12 * 100%) + #{$gutter});
+        }
+
+    }
+
+
+
+
+
+
 
 </style>
